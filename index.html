@@ -3,33 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Counter</title>
 </head>
-<script>
-    let state={
-        count:0
-    }
-    function onButtonPress(){
-        state.count++;
-        buttonComponentReRender()
-    }
 
-
-    function buttonComponentReRender(){
-        document.getElementById("buttonParent").innerHTML ="";
-        const component= buttonComponent(state.count);
-        document.getElementById("buttonParent").appendChild(component);
-    }
-
-    function buttonComponent(count){
-        const button= document.createElement("button");
-        button.innerHTML=`Counter ${count}`;
-        button.setAttribute("onClick",'onButtonPress()');
-        return button;
-    }
-    buttonComponentReRender;
-</script>
 <body>
-        <button onclick="onButtonPress()" id="btn">Counter 0</button>
+    <div id="buttonParent">
+    </div>
+    <script>
+        //imp part updating the state
+        let state = {
+            count: 0
+        };
+
+        function onButtonPress() {
+            state.count++;
+            buttonComponentReRender();
+        }
+
+        function buttonComponentReRender() {
+            const parent = document.getElementById("buttonParent");
+            parent.innerHTML = "";
+            const component = buttonComponent(state.count);
+            parent.appendChild(component);
+        }
+
+        //this is react part done by react library
+        function buttonComponent(count) {
+            const button = document.createElement("button");
+            button.innerHTML = `Counter ${count}`;
+            button.onclick = onButtonPress;
+            return button;
+        }
+
+        // Initial render
+        buttonComponentReRender();
+
+
+
+
+        // this creates a div and a button component inside it for first the fun calls  
+        //  buttonComponentReRender();
+        //then when i click the button the  state++ and then fun   buttonComponentReRender(); 
+        // calls and then it updates and makes new button and adds it to the div again
+        //react works like this under the hood
+    </script>
 </body>
 </html>

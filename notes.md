@@ -7,4 +7,9 @@ represents dynamic things in app
  
 components= its reusable snippet that changes given a state 
 
-re-rendering = a state change triggers re render ..represents dom being manipulated when state changes. 
+re-rendering = a state change triggers re render ..represents dom being manipulated when state changes.
+
+
+dynamic website needs state and components
+
+
