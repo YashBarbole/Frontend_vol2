@@ -12,4 +12,11 @@ re-rendering = a state change triggers re render ..represents dom being manipula
 
 dynamic website needs state and components
 
+any time parent rerenders child also re renders
 
+
+RERENDERING::::
+we have to minimize the number of rerenders
+1. we push the state down we do not include state in parent app 
+2. useMemo-- memoisation  
+memo lets us skip rerender when props are unchanged
