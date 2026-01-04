@@ -20,3 +20,13 @@ we have to minimize the number of rerenders
 1. we push the state down we do not include state in parent app 
 2. useMemo-- memoisation  
 memo lets us skip rerender when props are unchanged
+useeffect also used
+
+ 
+side effects during rendering some func and component gets called
+
+hooks revise:
+
+1. useEffect takes state variables in input and when state variables change they run -- easy done
+2. useMemo also used to stop unnessasary re renders
+usememo and useeffect are similar just in usememo we dont need extra state variable

@@ -1,54 +1,45 @@
 
-import React from "react";
+import React, { useMemo, useState } from "react";
 
 function App() {
 
-//   const [todos,setTodos]=useState([
-//   {id:1,
-//     title:"go gymm",
-//     desc:"gymmm jaaa"
-//   },
-// {id:2,
-//     title:"go000 gymm",
-//     desc:"gymmm jaaa"
+  const [counter,setCounter]= useState(0);
+  const[value,setValue]=useState(1);
 
-// },
-// {id:3,
-//     title:"go gymmmmmm",
-//     desc:"gymmm jaaa"
-// }])
+  let count=useMemo(()=>{ 
+    console.log("memo called ")
+    let count=0;
+  for(let i=0;i<=value;i++){
+  count=count+i;;
+  }
+return count;
+},[value])
 
-// function addTodo(){
-//   setTodos([...todos,{
-//     id:Math.random(),
-//     title:Math.random(),
-//     desc:Math.random()
-//   }])
+return  <div>
+            <input onChange={function(e){
+              setValue(e.target.value);
+            }} placeholder={"find sum from 1 to n"}/>
+            <br />
+            sum from 1 to {value} is {count}
+            <br />
+            <button onClick={()=>{
+              setCounter(counter+1)
+            }}>Counter({counter}) </button>
+    </div>
+}
+
+  //////////////////////////////////
 // }
-  return  <>
-    <CardWrappper innerComponent={<TextComponent/>}></CardWrappper>
-
-     <CardWrappper innerComponent={<TextComponent/>}></CardWrappper>
-
-      <CardWrappper innerComponent={<TextComponent/>}></CardWrappper>
-    {/* <HeaderWithButton></HeaderWithButton>
-    <Header title="yash2"></Header> */}
-    {/* <button onClick={addTodo}>Add todo</button>
-    {todos.map(todo=> <Todo  key={todo.id} title={todo.title} desc={todo.desc}></Todo>)}
-    </> */}
-    </>
-  
-}
-function TextComponent(){
-  return <div>
-    hii yash
-  </div>
-}
-function CardWrappper({innerComponent}){
-  return <div style={{border:"2px solid black ",padding:20}}>
-    {innerComponent}
-  </div>
-}
+// function TextComponent(){
+//   return <div>
+//     hii yash
+//   </div>
+// }
+// function CardWrappper({innerComponent}){
+//   return <div style={{border:"2px solid black ",padding:20}}>
+//     {innerComponent}
+//   </div>
+// }
 // function Todo({title,desc}){
 //   return <div>
 //     <h1>{title}</h1>
