@@ -30,3 +30,10 @@ hooks revise:
 1. useEffect takes state variables in input and when state variables change they run -- easy done
 2. useMemo also used to stop unnessasary re renders
 usememo and useeffect are similar just in usememo we dont need extra state variable
+
+in usememo when the function is memoised the react doesnt know its the same func it cant understand so it re renders even if same function
+
+3. useCallback used to memoize functions specially for child components 
+  
+  need to revise all these concepts by 6-1-26
+
