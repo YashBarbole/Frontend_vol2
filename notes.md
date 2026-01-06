@@ -35,5 +35,5 @@ in usememo when the function is memoised the react doesnt know its the same func
 
 3. useCallback used to memoize functions specially for child components 
   
-  need to revise all these concepts by 6-1-26
+  need to revise all these concepts by 8-1-26
 
