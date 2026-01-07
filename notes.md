@@ -1,3 +1,4 @@
+
 why need react
 = easy way to write normal html css js..converts into html css js under the hood.
 hard to do dom manipulation ..react compiler converts react into html css js 
@@ -35,5 +36,13 @@ in usememo when the function is memoised the react doesnt know its the same func
 
 3. useCallback used to memoize functions specially for child components 
   
-  need to revise all these concepts by 8-1-26
+
+react lets us create single page applications 
+
+ROUTING
+react router dom and prop drilling ---not done have to do by using docs
+
+state management using recoil 
+
+7-1-26 not done any 
 
