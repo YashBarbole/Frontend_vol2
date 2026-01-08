@@ -44,5 +44,5 @@ react router dom and prop drilling ---not done have to do by using docs
 
 state management using recoil 
 
-7-1-26 not done any 
+nothing 
 
