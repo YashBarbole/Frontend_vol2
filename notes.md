@@ -44,5 +44,5 @@ react router dom and prop drilling ---not done have to do by using docs
 
 state management using recoil 
 
-nothing done today till 12-1-26
+nothing done today from 8-1-6 till 15-1-26
 
